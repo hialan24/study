@@ -84,6 +84,7 @@ class GuavaLocalCache[K <: Object,V <: Object](flashCache: FlashCache[K,V],outTi
 
               if( null ==  value){
                 value = flash.getKey(key)
+                // guava 中不允许 value 为 null
                 super.put(key,value)
               }
 

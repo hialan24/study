@@ -20,11 +20,13 @@ class TestFlashCache {
 
   @Test
   def testGuavaLocalCache(): Unit ={
-    val noCache = new NoCache[String,String]
-    val guavaCache = new GuavaLocalCache[String,String](noCache,10)
     val value = (k:String) => {
       k
     }
+
+    val noCache = new NoCache[String,String](value)
+    val guavaCache = new GuavaLocalCache[String,String](noCache,10)
+
 
     guavaCache.getKey("hello",null)
 

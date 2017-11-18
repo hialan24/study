@@ -10,7 +10,15 @@ package Cache
   * \*/
 trait FlashCache[K,V] {
 
-  def getKey(key:K,value:K=>V = null):V
+  /**
+    *
+    * 获取 key 对应的 value
+    *
+    * @param key
+    * @param getter  // 生成 value 的方式
+    * @return
+    */
+  def getKey(key:K,getter:K=>V = null):V
 
   def setKey(key:K,value:V)
 
