@@ -1,6 +1,5 @@
 package Cache
 
-import com.google.common.base.Predicate
 import org.junit.Assert
 
 /**

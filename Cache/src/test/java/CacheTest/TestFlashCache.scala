@@ -27,8 +27,9 @@ class TestFlashCache {
     val noCache = new NoCache[String,String](value)
     val guavaCache = new GuavaLocalCache[String,String](noCache,10)
 
-
     guavaCache.getKey("hello",null)
+
+    guavaCache.setKey("hello","world")
 
   }
 }
